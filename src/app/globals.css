@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #061425;
+  --accent: #f4d35e;
+  --accent2: #ef4444;
+  --accent3: #0ea5e9;
+  --background: #303a44;
+
+  --primaryDark: #191919;
+  --highlight: #e80000;
+  --whiteColor: #f7f7ff;
+  --blackColor: #000814;
+  --greyColor: #c5c5c5;
+  --transparent: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #061425;
+    --accent: #f4d35e;
+    --accent2: #ef4444;
+    --accent3: #0ea5e9;
+    --background: #303a44;
+
+    --primaryDark: #191919;
+    --highlight: #e80000;
+    --whiteColor: #f7f7ff;
+    --blackColor: #000814;
+    --greyColor: #c5c5c5;
+    --transparent: transparent;
+  }
+}
+::selection {
+  background: var(--accent);
+}
+
+@layer components {
+  .site-core {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .site-content {
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    background-color: pink;
+    transition: opacity 0.3s ease-in;
+    height:100vh;
+  }
+}
